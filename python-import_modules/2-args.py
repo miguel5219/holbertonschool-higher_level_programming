@@ -8,7 +8,7 @@ if __name__ == "__main__":
     if _len > 1:
         print("{} arguments:".format(_len))
     elif _len == 1:	
-        print("{} arguments:".format(_len))
+        print("{} argument:".format(_len))
     else:
         print("{} arguments:".format(_len))
 
