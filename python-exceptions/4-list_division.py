@@ -19,4 +19,4 @@ def list_division(my_list_1, my_list_2, list_length):
             prod = 0
         finally:
             newList.append(prod)
-    return (newList9)
+    return (newList)
