@@ -21,8 +21,8 @@ def matrix_divided(matrix, div):
                 raise TypeError("matrix must be a matrix (list of lists of integers/floats")
 
     if type(div) not in [int, float]:
-        raise TypeError("divmustbe a number")
+        raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    return (list(map(lambda x: list(map(lambda y: round(y / div, 2), x)),matrix)))
+    return (list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix)))
