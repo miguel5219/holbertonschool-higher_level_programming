@@ -11,7 +11,7 @@ import from module:
 
 testing:
 
->>> say_my_name("Jhon", "Smith")
+>>> say_my_name("John", "Smith")
 My name is John Smith
 
 >>> say_my_name("John", 3)
