@@ -1,0 +1,30 @@
++++++++++++++++++++++++++++++++++++++++
+Test for "5-text_indentation.py" module
++++++++++++++++++++++++++++++++++++++++
+
+the function in this module ''text_indentation''
+function that prints a text with 2 new lines 
+after each of these characters: '.', '?' and ':'
+````````````````````````````````````````````````
+
+improt from module:
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+testing:
+
+>>> text_indentation("Hello world. Who's there? Just me: Luis")
+Hello world.
+<BLANKLINE>
+Who's there?
+<BLANKLINE>
+Just me:
+<BLANKLINE>
+Luis
+
+>>> text_indentation(10)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
