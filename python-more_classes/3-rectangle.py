@@ -49,7 +49,7 @@ class Rectangle:
 
         if not self.width or not self.height:
             return (string_result)
-        
+
         for i in range(self.height):
             string_result += ("#" * self.width) + "\n"
         return (string_result[:-1])
