@@ -13,7 +13,7 @@ class Square(Rectangle):
     """
     def __init__(self, size):
         """
-        methodthat validates args and set 
+        methodthat validates args and set
         the as private attributes
         args:
             size: Square size
