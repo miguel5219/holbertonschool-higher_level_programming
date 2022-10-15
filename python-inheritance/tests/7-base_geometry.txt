@@ -1,0 +1,120 @@
+Test: 7-base_geometry
+=====================
+
+IMPORT THE FILE
+===============
+
+>>>BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+SUCCESS
+=======
+
+Test 1 - String and int as parameters
+
+>>> bg.integer_validator("width", 89)
+
+ERROR
+=====
+
+Test 2 - Two strings as parameters
+
+>>> try:
+...     bg.integer_validator("name", "john")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
+
+Test 3 - Second value as float NaN
+
+>>> try:
+...     bg.integer_validator("NaN", float('nan'))
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] NaN must be an integer
+
+>>> try:
+...     bg.integer_validator("name", (8, ))
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
+
+Test 5 - Second value as bool
+
+>>> try:
+...     bg.integer_validator("name", False)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
+
+Test 6 - second value as infinite number
+
+>>> try:
+...     bg.integer_validator("inf", 1e900)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] inf must be an integer
+
+Test 7 - Second value 0
+
+>>> try:
+...     bg.integer_validator("age", 0)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] age must be greater than 0
+
+Test 8 - Second value is negative
+
+>>> try:
+...     bg.integer_validator("Negative", -4)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] Negative must be greater than 0
+
+Test 9 - No parameters
+
+>>> try:
+...     bg.area()
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[Exception] area() is not implemented
+
+Test 10 - None as parameters
+
+>>> try:
+...     bg.integer_validator("name", None)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
+
+Test 11 - Dictionary value as parameter
+
+>>> try:
+...     bg.integer_validator("name", {3, 4})
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[typeError] name must be an integer
+
+Test 12 - List as parameter
+
+>>> try:
+...     bg.integer_validator("name", [])
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
+
+Test 13 - Only first parameter set
+
+>>> try:
+...     bg.integer_validator("name")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] integer_validator() missing 1 required positional argument: 'value'
+
+Test 14 - Without any parameter
+
+>>> try:
+...     bg.integer_validator()
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] integer_validator() missing 2 required positional arguments: 'name' and 'value'
