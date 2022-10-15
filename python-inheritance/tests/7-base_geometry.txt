@@ -93,7 +93,7 @@ Test 11 - Dictionary value as parameter
 ...     bg.integer_validator("name", {3, 4})
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
-[typeError] name must be an integer
+[TypeError] name must be an integer
 
 Test 12 - List as parameter
 
