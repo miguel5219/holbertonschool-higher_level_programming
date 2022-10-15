@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 """
-this module define subclass rectangle using
+Define subclass rectangle using
 BaseGeometry as parent class
 """
 
 
-BaseGeometry = __import___('7-base_geometry').BaseGeometry
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
     """
-    this is Subclass Rectangle with class BaseGeometry
+    Subclass Rectangle with class BaseGeometry
     """
     def __init__(self, width, height):
         """
