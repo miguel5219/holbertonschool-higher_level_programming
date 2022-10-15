@@ -8,7 +8,7 @@ class BaseGeometry:
     """
     define class with area method
     """
-    def are(self):
+    def area(self):
         """
         Raises:
             Exception: area() is not implemented
