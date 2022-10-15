@@ -12,4 +12,3 @@ def write_file(filename="", text=""):
     """
     with open(filename, 'w', encoding='utf-8') as rf:
         return rf.write(text)
-
