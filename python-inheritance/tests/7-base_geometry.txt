@@ -4,7 +4,7 @@ Test: 7-base_geometry
 IMPORT THE FILE
 ===============
 
->>>BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 
 SUCCESS
