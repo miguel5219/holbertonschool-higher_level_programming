@@ -13,7 +13,8 @@ class Rectangle(BaseGeometry):
     this is Subclass Rectangle with class BaseGeometry
     """
     def __init__(self, width, height):
-        """attributes:
+        """
+        attributes:
         width (int): The width of the rectangle
         height (int): the height of the rectangle
         """
