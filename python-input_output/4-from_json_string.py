@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" define module """
+""" this module contains the
+    function from_json_string()
+"""
 
 
 import json
