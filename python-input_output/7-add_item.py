@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ module imports two functions and execute """
 
+
 from os import path
 from sys import argv
 
