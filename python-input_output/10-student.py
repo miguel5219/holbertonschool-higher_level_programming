@@ -20,12 +20,12 @@ class Student:
 
         obj_ = dict()
         if type(attrs) is list:
-            for obj_ in attrs:
-                if type(obj_) is not str:
+            for _obj_ in attrs:
+                if type(_obj_) is not str:
                     return self.__dict__
 
-                if i in self.__dict__:
-                    obj_[i] = self.__dict__[i]
+                if _obj_ in self.__dict__:
+                    obj_[_obj_] = self.__dict__[_obj_]
 
             return obj_
 
