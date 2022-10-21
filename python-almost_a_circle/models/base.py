@@ -6,7 +6,7 @@ import os
 
 class Base:
     """ this class handles the instance attribute
-        id for other classes to to save code 
+        id for other classes to to save code
 
         attributes:
             __nb_objects: couter for the number of
@@ -20,5 +20,5 @@ class Base:
         if id:
             self.id = id
         else:
-            base.__nb_objects += 1
-            self.id = base.__nb_objects
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
