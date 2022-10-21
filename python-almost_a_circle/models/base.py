@@ -4,7 +4,7 @@ import json
 import os
 
 
-class base:
+class Base:
     """ this class handles the instance attribute
         id for other classes to to save code 
 
