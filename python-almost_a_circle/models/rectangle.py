@@ -23,58 +23,58 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    @property
-    def width(self):
-        return self.__width
+        @property
+        def width(self):
+            return self.__width
 
-    @width.setter
-    def width(self, value):
-        if type(value) is not int:
-            raise TypeError('width must be an integer')
+        @width.setter
+        def width(self, value):
+            if type(value) is not int:
+                raise TypeError('width must be an integer')
 
-        if value <= 0:
-            raise ValueError('width must be > 0')
+            if value <= 0:
+                raise ValueError('width must be > 0')
 
-        self.__width = value
+            self.__width = value
 
-    @property
-    def height(self):
-        return self.__height
+        @property
+        def height(self):
+            return self.__height
 
-    @height.setter
-    def height(self, value):
-        if type(value) is not int:
-            raise TypeError('width must be an integer')
+        @height.setter
+        def height(self, value):
+            if type(value) is not int:
+                raise TypeError('width must be an integer')
 
-        if value <= 0:
-            raise ValueError('width must be > 0')
+            if value <= 0:
+                raise ValueError('width must be > 0')
 
-        self.__height = value
+            self.__height = value
 
-    @property
-    def x(self):
-        return self.__x
+        @property
+        def x(self):
+            return self.__x
 
-    @x.setter
-    def x(self, value):
-        if type(value) is not int:
-            raise TypeError('width must be an integer')
+        @x.setter
+        def x(self, value):
+            if type(value) is not int:
+                raise TypeError('width must be an integer')
 
-        if value <= 0:
-            raise ValueError('width must be > 0')
+            if value <= 0:
+                raise ValueError('width must be > 0')
 
-        self.__x = value
+            self.__x = value
 
-    @property
-    def y(self):
-        return self.__y
+        @property
+        def y(self):
+            return self.__y
 
-    @y.setter
-    def y(self, value):
-        if type(value) is not int:
-            raise TypeError('width must be an integer')
+        @y.setter
+        def y(self, value):
+            if type(value) is not int:
+                raise TypeError('width must be an integer')
 
-        if value <= 0:
-            raise ValueError('width must be > 0')
+            if value <= 0:
+                raise ValueError('width must be > 0')
 
-        self.__y = value
+            self.__y = value
