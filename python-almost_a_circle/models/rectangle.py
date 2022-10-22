@@ -77,7 +77,6 @@ class Rectangle(Base):
 
         self.__y = value
 
-    @property
     def area(self):
         """ method to define de area of rectangle """
         return self.width * self.height
