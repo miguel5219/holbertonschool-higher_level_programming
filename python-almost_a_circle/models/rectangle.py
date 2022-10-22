@@ -109,6 +109,7 @@ class Rectangle(Base):
         """
 
     def update(self, *args):
+        """ method that assigns an argument to each attribute """
         self.args = id
         self.args = width
         self.args = height
