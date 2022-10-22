@@ -92,4 +92,4 @@ class Rectangle(Base):
     def __str__(self):
         """ returns the string of the object """
         return f"[{self.__class__.__name__}] ({self.id}) {self.x}/{self.y}" \
-        f" - {self.width}/{self.height}"
+            f" - {self.width}/{self.height}"
