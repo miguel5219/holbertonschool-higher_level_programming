@@ -13,8 +13,6 @@ class Square(Rectangle):
         y: the y coordinate of the square
         id: identifier of the square
     """
-
-
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
 
