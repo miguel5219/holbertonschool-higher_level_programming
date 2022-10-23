@@ -61,3 +61,7 @@ class Square(Rectangle):
     def __str__(self):
         return f"[{self.__class__.__name__}] ({self.id}) {self.x}/{self.y}" \
                 f" - {self.width}"
+
+    def to_dictionary(self):
+        dict_ = {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
+        return dict_
