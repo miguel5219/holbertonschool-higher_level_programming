@@ -45,9 +45,17 @@ class Square(Rectangle):
             elif i == 4:
                 self.y = a
 
-    if not args:
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+    else:
+        if "id" in kwargs:
+            self.id = kwargs["id"]
+        if "width" in kwargs:
+            self.width = kwargs["width"]
+        if "height" in kwargs:
+            self.height = kwargs["height"]
+        if "x" in kwargs:
+            self.x = kwargs["x"]
+        if "y" in kwargs:
+            self.y = kwargs["y"]
 
     def __str__(self):
         return f"[{self.__class__.__name__}] ({self.id}) {self.x}/{self.y}" \
