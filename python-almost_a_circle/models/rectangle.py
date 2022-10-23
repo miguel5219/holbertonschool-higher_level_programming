@@ -108,7 +108,7 @@ class Rectangle(Base):
             5th argument should be the y attribute
         """
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ method that assigns an argument to each attribute """
 
         if len(args):
@@ -123,7 +123,6 @@ class Rectangle(Base):
                     self.x = a
                 elif i == 4:
                     self.y = a
-
         else:
             if "id" in kwargs:
                 self.id = kwargs["id"]
