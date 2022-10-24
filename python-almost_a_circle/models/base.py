@@ -84,3 +84,15 @@ class Base:
 
         result.update(**dictionary)
         return result
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        loads a list of instances read from a file
+        """
+        filePath_ = f"{cls.__name__}.json"
+        if not os.path.exists(filePath_):
+            return []
+        with open(filePath_, encoding="utf-8")as f:
+            reading = Base.from_json_string(f.read())
+        return [cls.create(**elem) for elem in reading]
