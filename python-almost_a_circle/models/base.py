@@ -75,7 +75,7 @@ class Base:
         """
 
         from models.rectangle import Rectangle
-        from models.square import square
+        from models.square import Square
 
         if cls is Rectangle:
             result = cls(1, 1)
