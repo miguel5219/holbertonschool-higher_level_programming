@@ -50,3 +50,16 @@ class Base:
             result = [elem.to_dictionary() for elem in list_objs]
         with open(f"{cls.__name__}.json", mode="w", encoding="utf-8") as f:
             f.write(cls.to_json_string(result))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ returns the list of the JSON string
+
+        attributes:
+            json_string: a string representing a list of 
+            dictionaries
+        """
+
+        if json_string is None:
+            return []
+        return json.loads(json_string)
