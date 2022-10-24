@@ -48,5 +48,5 @@ class Base:
         result = []
         if list_objs is not None:
             result = [elem.to_dictionary() for elem in list_objs]
-        with open (f"{cls.__name__}.json", mode="w", encoding="utf-8") as f:
+        with open(f"{cls.__name__}.json", mode="w", encoding="utf-8") as f:
             f.write(cls.to_json_string(result))
