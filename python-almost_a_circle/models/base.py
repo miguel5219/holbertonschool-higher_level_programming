@@ -63,3 +63,24 @@ class Base:
         if json_string is None:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ create an object of the class
+        cls, based on a dictionary
+
+        attributes:
+            dictionary: dictionary with the
+            attributes of the new object
+        """
+
+        from models.rectangle import Rectangle
+        from models.square import square
+
+        if cls is Rectangle:
+            result = cls(1, 1)
+        elif cls is Square:
+            result = cls(1)
+
+        result.update(**dictionary)
+        return result
