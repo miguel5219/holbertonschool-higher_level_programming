@@ -56,7 +56,7 @@ class Base:
         """ returns the list of the JSON string
 
         attributes:
-            json_string: a string representing a list of 
+            json_string: a string representing a list of
             dictionaries
         """
 
