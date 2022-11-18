@@ -16,7 +16,7 @@ def _filter_states():
     )
 
     cur_ = db.cursor()
-    query_ = "SELECCT id, name FROM states WHERE BINARY name ='{}' \
+    query_ = "SELECT id, name FROM states WHERE BINARY name ='{}' \
               ORDER BY states.id ASC".format(argv[4])
     cur_.execute(query_)
 
