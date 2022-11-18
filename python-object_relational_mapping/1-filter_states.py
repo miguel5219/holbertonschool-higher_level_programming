@@ -20,7 +20,7 @@ def select_started_with_N():
               ORDER BY states.id ASC"
     cur_.execute(query_)
 
-    rows =cur_.fetchall()
+    rows = cur_.fetchall()
     for row in rows:
         print(row)
 
