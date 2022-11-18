@@ -6,6 +6,7 @@ from sys import argv
 
 
 def cities_state():
+    """ script that list all cities from database """
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
