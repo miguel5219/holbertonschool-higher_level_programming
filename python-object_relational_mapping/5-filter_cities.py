@@ -19,7 +19,7 @@ def cities_state():
     if ';' in argv[4]:
         return
 
-    cur_ =db.cursor()
+    cur_ = db.cursor()
     query_ = "SELECT t1.id, t1.name, t2.name \
               FROM cities t1 \
               LEFT JOIN states t2 \
