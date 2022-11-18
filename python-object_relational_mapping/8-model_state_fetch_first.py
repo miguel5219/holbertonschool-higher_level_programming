@@ -11,8 +11,8 @@ def model_state_fetch_first():
     """ pprints the first state object from database hbtn_0e_6_usa """
 
     url = 'mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1],
-                                                       sys.argv[2],
-                                                       sys.argv[3])
+                                                      sys.argv[2],
+                                                      sys.argv[3])
     engine_ = create_engine(url, pool_pre_ping=True)
     Base.metadata.create_all(engine_)
     State.metadata.create_all(engine_)
