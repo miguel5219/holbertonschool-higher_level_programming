@@ -24,7 +24,7 @@ def select_started_with_N():
     for row in rows:
         print(row)
 
-        db.close()
+    db.close()
 
 
 if __name__ == "__main__":
