@@ -7,6 +7,7 @@ from sys import argv
 
 def cities_state():
     """ script that list all cities from database """
+
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -28,9 +29,9 @@ def cities_state():
     cur_.execute(query_)
 
     rows = cur_.fetchall()
-    for i, row in enumerate(rows)
+    for i, row in enumerate(rows):
         if i > 0:
-            print(', ',  end="")
+            print(', ', end="")
         print(row[1], end="")
     print()
 
