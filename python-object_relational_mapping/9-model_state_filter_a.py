@@ -23,7 +23,7 @@ def model_state_filter_a():
     conn = engine_.connect()
     session = Session(bind=conn)
 
-    objs = session.query(State).order_by(State.id).first()
+    objs = session.query(State).order_by(State.id).all()
 
     for obj in objs:
         if 'a' in obj.name:
