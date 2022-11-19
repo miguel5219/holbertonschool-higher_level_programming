@@ -27,7 +27,7 @@ def model_state_filter_a():
 
     for obj in objs:
         if 'a' in obj.name:
-            print("{}: {}".format(objs.id, objs.name))
+            print("{}: {}".format(obj.id, obj.name))
 
 
 if __name__ == "__main__":
