@@ -2,9 +2,9 @@
 """ module contains the  function model_state_my_get() """
 
 from model_state import Base, State
-import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+import sys
 
 
 def model_state_my_get():
@@ -14,8 +14,8 @@ def model_state_my_get():
     url = 'mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1],
                                                       sys.argv[2],
                                                       sys.argv[3])
-    
-    if ';' in argv[4]:
+
+    if ';' in sys.argv[4]:
         return
 
     engine_ = create_engine(url, pool_pre_ping=True)
