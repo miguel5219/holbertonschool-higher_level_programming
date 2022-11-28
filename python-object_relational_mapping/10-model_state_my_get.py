@@ -13,12 +13,12 @@ if __name__ == "__main__":
         sys.argv[1], sys.argv[2], sys.argv[3]))
     engine_.connect()
 
-    session = Session(engine)
+    session = Session(engine_)
 
     for state in session.query(State).all():
-    if sys.argv[4] == state.name:
-        print("{}".format(state.id))
-        search = True
+        if sys.argv[4] == state.name:
+            print("{}".format(state.id))
+            search = True
     if search is False:
         print("Not found")
     session.close()
