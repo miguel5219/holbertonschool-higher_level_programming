@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" module contains the  function model_state_my_get() """
+""" lists all state objects from database hbtn_0e_6_usa """
 
 if __name__ == "__main__":
     from model_state import Base, State
@@ -8,12 +8,11 @@ if __name__ == "__main__":
     import sys
     search = False
 
-
-    engine_ = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(
         sys.argv[1], sys.argv[2], sys.argv[3]))
-    engine_.connect()
+    engine.connect()
 
-    session = Session(engine_)
+    session = Session(engine)
 
     for state in session.query(State).all():
         if sys.argv[4] == state.name:
