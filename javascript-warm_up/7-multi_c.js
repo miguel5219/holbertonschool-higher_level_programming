@@ -1,6 +1,6 @@
 #!/usr/bin/node
 let myVar = process.argv[2];
-myVar = parseInt(myvar);
+myVar = parseInt(myVar);
 if (isNaN(myVar)) {
   console.log('Missing number of ocurrences');
 } else {
