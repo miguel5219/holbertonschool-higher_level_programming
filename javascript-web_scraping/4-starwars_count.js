@@ -6,7 +6,7 @@ request(urlApi, function (error, response, body) {
     console.log(error);
   }
   let x = 0;
-  for (const result of JSON.parse(body).result) {
+  for (const result of JSON.parse(body).results) {
     for (const Wedge of result.characters) {
       if (Wedge.includes(18)) {
         x++;
