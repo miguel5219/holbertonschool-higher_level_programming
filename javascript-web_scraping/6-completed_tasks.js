@@ -7,7 +7,7 @@ request(urlApi, function (error, response, body) {
   }
   const file = {};
   for (const task of JSON.parse(body)) {
-    if (task.completed === True) {
+    if (task.completed === true) {
       if (file[task.userId]) {
         file[task.userId]++;
       } else {
